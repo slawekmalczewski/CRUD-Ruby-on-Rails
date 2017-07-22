@@ -1,0 +1,30 @@
+<h3>Lista wpisów</h3>
+
+<p><%= link_to "Dodaj nowy wpis", new_post_path, class: "btn  btn-success" %></p>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Tytul</th>
+      <th>Autor</th>
+      <th>Opublikowany?</th>
+      <th>Tresc</th>
+      <th>Akcje</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @posts.each do |post| %>
+      <tr>
+        <td><%= post.id %></td>
+        <td><%= post.title %></td>
+        <td><%= post.author %></td>
+        <td><%= post.published ? "tak" : "nie" %></td>
+        <td><%= post.body %></td>
+        <td>
+
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+
+</table>
